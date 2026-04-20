@@ -9,5 +9,5 @@
       ]
     }
   },
-  "postCreateCommand": "pip3 install -r requirements.txt"
+  "postCreateCommand": "pip3 install ipykernel && pip3 install -r requirements.txt"
 }
