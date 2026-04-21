@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-"""
-Download BTS TranStats On-Time Performance data for every year/month
-from https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGK&QO_fu146_anzr=b0-gvzr
-
-Requirements:
-    pip install playwright
-    playwright install chromium
-
-Usage:
-    python download_transtats.py
-
-Notes:
-- Update SELECTED_FIELDS to match the exact field names shown on the page.
-- Files are saved into DOWNLOAD_DIR/year=YYYY/month=MM/
-"""
 
 from pathlib import Path
 from typing import Iterable, List
@@ -24,32 +8,30 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 
 URL = "https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGK&QO_fu146_anzr=b0-gvzr"
 
-# Exact field names as shown on the page.
-# Replace these with the fields you want.
-SELECTED_FIELDS: List[str] = [
+SELECTED_FIELDS= [
     "Year",
     "Month",
     "FlightDate",
     "Marketing_Airline_Network",
     "Flight_Number_Marketing_Airline",
-    # "Origin",
-    # "Dest",
-    # "CRSDepTime",
-    # "DepTime",
-    # "DepDelay",
-    # "CRSArrTime",
-    # "ArrTime",
-    # "ArrDelay",
-    # "Cancelled",
-    # "CancellationCode",
-    # "Diverted",
-    # "AirTime",
-    # "Distance",
-    # "CarrierDelay",
-    # "WeatherDelay",
-    # "NASDelay",
-    # "SecurityDelay",
-    # "LateAircraftDelay",
+    "Origin",
+    "Dest",
+    "CRSDepTime",
+    "DepTime",
+    "DepDelay",
+    "CRSArrTime",
+    "ArrTime",
+    "ArrDelay",
+    "Cancelled",
+    "CancellationCode",
+    "Diverted",
+    "AirTime",
+    "Distance",
+    "CarrierDelay",
+    "WeatherDelay",
+    "NASDelay",
+    "SecurityDelay",
+    "LateAircraftDelay",
 ]
 
 # Based on the current page options.
