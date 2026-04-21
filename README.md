@@ -53,9 +53,8 @@ You can clone this repository to your computer and run the notebook locally. The
 2. Navigate to the folder where you want to store the project:
 
    ```bash
-cd yourprojectpath
+    cd yourprojectpath
    ```
-
 3. Clone the repository:
 
    ```bash
