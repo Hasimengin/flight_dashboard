@@ -10,7 +10,7 @@ download_dir=r"" ## specify your download directory here
 fields =["FlightDate", "Operating_Airline ","DOT_ID_Operating_Airline","OriginAirportID",
 "Origin","OriginCityName"	,"OriginStateFips","OriginStateName",
 "DestAirportID","Dest","DestCityName","DestStateFips","DestStateName",
-"DepTime"	,"DepDelay","DepDelayMinutes","DepDel15","ArrTime","ArrDelay","ArrDelayMinutes",
+"DepTime","DepDelay","DepDelayMinutes","DepDel15","ArrTime","ArrDelay","ArrDelayMinutes",
 "ArrDel15","Cancelled","CancellationCode","Diverted","AirTime","Distance",
 "CarrierDelay","WeatherDelay","NASDelay","SecurityDelay",
 "LateAircraftDelay","FirstDepTime"]
